@@ -1,0 +1,25 @@
+# OS / Editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# This repository hosts ONLY the production-built static site.
+# Source, dependencies, and build artifacts live in the main project repo.
+node_modules/
+src/
+dist/
+.cache/
+.parcel-cache/
+.vite/
+*.tsbuildinfo
+
+# Local env / secrets
+.env
+.env.*
+!.env.example
