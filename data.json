@@ -300,10 +300,39 @@
       "id": "public-library",
       "badgeLabel": "Public Library",
       "title": "Public Library",
-      "summary": "An additional software project from my development portfolio.",
-      "description": "Public Library is an additional software project listed in my professional portfolio. Detailed media and implementation notes can be added here as the project documentation evolves.",
-      "techStack": ["Software Engineering"],
-      "images": [],
+      "summary": "A responsive web application for browsing books, discovering events, and contacting the library.",
+      "description": "Public Library is a lightweight full-stack web application designed for small libraries and educational institutions. It digitizes essential services through a responsive book catalog, interactive book information, upcoming event listings, user authentication, and a contact form backed by message storage, with practical error handling and basic security measures.",
+      "techStack": ["HTML5", "CSS", "JavaScript", "PHP", "MySQL"],
+      "visualJourney": {
+        "title": "From library discovery to community participation",
+        "description": "A clear, responsive experience that introduces the library, helps visitors explore its collection, reveals useful book context, and keeps the community informed about upcoming activities."
+      },
+      "images": [
+        {
+          "src": "/assets/public-library-01-home.png",
+          "alt": "Public Library home page with navigation, welcome message, and library imagery",
+          "caption": "Welcoming library home page",
+          "description": "The landing page establishes the library identity and gives visitors direct access to books, events, contact services, and account login through a simple navigation system."
+        },
+        {
+          "src": "/assets/public-library-02-book-catalog.png",
+          "alt": "Public Library responsive catalog showing book covers, titles, and authors",
+          "caption": "Visual book catalog",
+          "description": "A responsive card grid makes the collection easy to scan by presenting recognizable covers alongside each book's title and author."
+        },
+        {
+          "src": "/assets/public-library-03-book-details.png",
+          "alt": "Public Library book catalog displaying an interactive description for a selected title",
+          "caption": "Contextual book descriptions",
+          "description": "Interactive descriptions reveal a concise synopsis beside the selected book, helping readers understand a title without leaving the catalog."
+        },
+        {
+          "src": "/assets/public-library-04-events.png",
+          "alt": "Public Library upcoming events page with event descriptions, dates, times, and locations",
+          "caption": "Upcoming community events",
+          "description": "Structured event cards bring together activity details, dates, times, and locations for reading sessions, writing workshops, and children's programs."
+        }
+      ],
       "links": [],
       "pdfLinks": [
         {
