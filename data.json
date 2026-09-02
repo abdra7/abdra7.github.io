@@ -284,10 +284,39 @@
       "id": "sahilha",
       "badgeLabel": "Sahilha",
       "title": "Sahilha",
-      "summary": "A student-centric university web platform for academic organization.",
-      "description": "Sahilha is a student-focused web platform created for Umm Al-Qura University to simplify study organization and everyday academic workflows through a clear, usable interface.",
-      "techStack": ["JavaScript", "HTML5", "CSS3", "UI/UX Design"],
-      "images": [],
+      "summary": "An Arabic study companion for planning subjects, focused sessions, exams, and achievements.",
+      "description": "Sahilha is a student-focused Arabic web platform created for Umm Al-Qura University. Its RTL experience brings study planning into one calm workspace with a personalized dashboard, configurable Pomodoro sessions, subject notes, exam and quiz scheduling, progress statistics, motivational streaks, achievements, and direct links to essential university services.",
+      "techStack": ["JavaScript", "HTML5", "CSS", "UI/UX Design"],
+      "visualJourney": {
+        "title": "From daily study planning to consistent academic progress",
+        "description": "A focused Arabic RTL workflow that helps students understand their day, protect concentration time, organize every subject, and stay motivated through visible progress and achievements."
+      },
+      "images": [
+        {
+          "src": "/assets/sahilha-01-dashboard.png",
+          "alt": "Sahilha Arabic RTL student dashboard with study statistics, upcoming exams, daily advice, and university links",
+          "caption": "Personalized study dashboard",
+          "description": "A welcoming overview combines the student's study streak, total focused time, subjects, Pomodoro sessions, earned badges, upcoming exams, daily guidance, and quick university links."
+        },
+        {
+          "src": "/assets/sahilha-02-study-timer.png",
+          "alt": "Sahilha configurable Arabic Pomodoro study timer with focus and break durations",
+          "caption": "Configurable focus timer",
+          "description": "Students can tailor study and break durations, choose a subject, and run structured Pomodoro sessions that turn focused work into measurable progress."
+        },
+        {
+          "src": "/assets/sahilha-03-subjects.png",
+          "alt": "Sahilha Arabic subject management interface with notes and exam scheduling",
+          "caption": "Subjects, notes, and assessments",
+          "description": "Each subject becomes an organized workspace for personal notes and dated exams or quizzes, while new courses can be added quickly from the same screen."
+        },
+        {
+          "src": "/assets/sahilha-04-achievements.png",
+          "alt": "Sahilha Arabic achievement gallery showing locked and completed study milestones",
+          "caption": "Motivating achievement system",
+          "description": "Progress-based badges reward useful habits such as adding subjects, completing focus sessions, recording assessments, maintaining a study streak, and reaching long-term study milestones."
+        }
+      ],
       "links": [],
       "pdfLinks": [
         {
