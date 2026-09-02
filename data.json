@@ -1,0 +1,354 @@
+{
+  "portfolio": {
+    "professionalTitle": "Software Engineer | AI & Software Systems",
+    "professionalSummary": "Computer Science graduate and Software Engineer with hands-on experience designing and delivering real-world applications from requirements to implementation. Experienced in backend development, APIs, databases, testing, and AI-enabled systems, with practical work across distributed AI, logistics, and machine learning projects. Focused on building reliable, maintainable software that solves practical problems.",
+    "aboutSummary": "I build reliable software from requirements through implementation, combining backend engineering, APIs, databases, testing, and clear user experiences across distributed AI, logistics, and machine learning products.",
+    "contactPitch": "If you're hiring for software engineering, AI-enabled systems, distributed agents, logistics platforms, or API-driven products, let's build something reliable and useful.",
+    "linkedin": "https://www.linkedin.com/in/abdulrahim-rashid",
+    "skills": [
+      {
+        "title": "Software Engineering",
+        "lines": ["Flutter & Dart", "Python & FastAPI", "Node.js & JavaScript", "REST APIs & Git"]
+      },
+      {
+        "title": "AI & Machine Learning",
+        "lines": ["AI Agents", "RAG & Generative AI", "Machine Learning & CNN", "TensorFlow / Keras"]
+      },
+      {
+        "title": "Data & Platforms",
+        "lines": ["PostgreSQL & MySQL", "Qdrant", "Ollama", "Streamlit"]
+      },
+      {
+        "title": "Engineering Practices",
+        "lines": ["Requirements Engineering", "QA & Testing", "Project Planning", "Problem Solving"]
+      }
+    ],
+    "experience": [
+      {
+        "title": "Developer & Designer",
+        "period": "Professional projects",
+        "bullets": [
+          "Built web and mobile solutions using Flutter, Node.js, JavaScript, PHP, MySQL, and REST API integrations.",
+          "Translated user and business requirements into functional interfaces and maintainable software features.",
+          "Delivered practical work across distributed AI, logistics, and machine learning products.",
+          "Focused on reliable, maintainable software that solves real operational problems."
+        ]
+      },
+      {
+        "title": "IT Solutions & Web Development Intern - TVTC",
+        "period": "Cooperative training",
+        "bullets": [
+          "Developed web solutions from requirements gathering and UI implementation to database integration and testing.",
+          "Implemented database-backed workflows and responsive interfaces using PHP, JavaScript, MySQL, HTML, and CSS.",
+          "Collaborated in a team environment to plan, implement, test, and deliver working software."
+        ]
+      }
+    ],
+    "education": {
+      "institution": "Umm Al-Qura University",
+      "degree": "Bachelor of Science in Computer Science",
+      "period": "Makkah, Saudi Arabia · 2026"
+    },
+    "languages": [
+      { "name": "Arabic", "level": "Native" },
+      { "name": "English", "level": "Full professional proficiency" }
+    ],
+    "certificationCount": 5
+  },
+  "projects": [
+    {
+      "id": "darbak",
+      "badgeLabel": "Darbak",
+      "title": "Darbak Logistics Platform",
+      "summary": "A logistics marketplace for businesses and independent drivers in Saudi Arabia.",
+      "description": "Darbak streamlines shipment intake, competitive driver bidding, offer comparison, live tracking, and digital delivery confirmation in one operational flow.",
+      "techStack": ["Flutter", "Node.js", "MySQL", "AWS S3", "Firebase"],
+      "visualJourney": {
+        "title": "From shipment request to confirmed delivery",
+        "description": "An annotated walkthrough of the core mobile experience, pairing every screen with the interaction it supports."
+      },
+      "images": [
+        {
+          "src": "/assets/1-3pHQzhJ9.png",
+          "alt": "Darbak guided shipment intake interface",
+          "caption": "Guided shipment intake",
+          "description": "Structured capture of origin, destination, load, and timing so every request is actionable for drivers."
+        },
+        {
+          "src": "/assets/2-Cg-zgBAB.png",
+          "alt": "Darbak real-time driver bidding interface",
+          "caption": "Real-time bidding",
+          "description": "Drivers submit competitive offers as they arrive, surfacing price and context without slowing the shipper down."
+        },
+        {
+          "src": "/assets/3-DBbvUr7o.png",
+          "alt": "Darbak offer comparison interface",
+          "caption": "Offer comparison and selection",
+          "description": "Shippers compare bids on price, rating, and reliability to choose the best fit confidently."
+        },
+        {
+          "src": "/assets/4-xvHv0FlD.png",
+          "alt": "Darbak live shipment tracking interface",
+          "caption": "Live tracking and status",
+          "description": "Live shipment status and driver updates maintain operational visibility across the Saudi network."
+        },
+        {
+          "src": "/assets/5-CB_sfyJv.png",
+          "alt": "Darbak digital delivery confirmation interface",
+          "caption": "Digital delivery confirmation",
+          "description": "A secure digital handoff closes each trip, reduces disputes, and completes the operational loop."
+        }
+      ],
+      "pdfLinks": [
+        {
+          "label": "View project details in CV",
+          "href": "/CV_Abdulrahim.pdf"
+        }
+      ]
+    },
+    {
+      "id": "visit-system",
+      "badgeLabel": "Visit System",
+      "title": "Visit System",
+      "summary": "An Arabic RTL visitor-management and institutional operations platform.",
+      "description": "The Visit System supports secure authentication, role-based dashboards, visit registration and tracking, supervisor and administrator management, statistics, visitor categories, scheduling, and audit-friendly visit records.",
+      "techStack": ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+      "visualJourney": {
+        "title": "A complete institutional visit workflow",
+        "description": "Eleven interfaces covering secure entry, operational dashboards, people and policy management, scheduling, and audit-ready records."
+      },
+      "images": [
+        {
+          "src": "https://github.com/user-attachments/assets/229cbe87-a200-4cfb-93bf-956807d5ac3c",
+          "alt": "Visit System institutional login interface",
+          "caption": "Institutional login (RTL)",
+          "description": "A polished Arabic sign-in experience that establishes clarity and trust at entry."
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/f2c7a8ee-673f-4890-b95b-b7c56831e9d3",
+          "alt": "Visit System dashboard",
+          "caption": "Dashboard — live visit metrics",
+          "description": "A concise operational overview of current visits and institutional activity."
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/1db8776d-1645-4762-bdf5-cb8383c854d0",
+          "alt": "Visit System visit tracking interface",
+          "caption": "Track visits — register lab entry",
+          "description": "A guided workflow for recording and following visits through the institution."
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/53d9c96a-62cd-4ac5-91f3-a78a8dff9e8a",
+          "alt": "Visit System supervisor management interface",
+          "caption": "Manage supervisors — access control",
+          "description": "Role-aware controls for managing supervisors and their operational access."
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/b223c14e-3cdd-4820-a2d3-3adb68fe3cdb",
+          "alt": "Visit System administrator directory",
+          "caption": "Admin directory — roles and CRUD",
+          "description": "Administrator records and role management presented in a clear, maintainable directory."
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/96f7ee23-ba7a-4785-bf33-28c13b8cbcf7",
+          "alt": "Visit System statistics interface",
+          "caption": "Statistics — operational overview",
+          "description": "Visit data summarized for monitoring, reporting, and informed operational decisions."
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/3083c28a-ff53-48e2-86a4-5fe22846b1fa",
+          "alt": "Visit System visitor-type configuration interface",
+          "caption": "Visitor types — configuration",
+          "description": "Configuration controls for defining the categories used across visit workflows."
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/d5369b2f-06b7-4346-9cab-ae6b4a3acb31",
+          "alt": "Visit System visitor-type directory",
+          "caption": "Visitor types — directory",
+          "description": "A searchable operational directory of configured visitor categories."
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/18526e35-5874-4247-84e9-09937d40a5f5",
+          "alt": "Visit System dean visit registration interface",
+          "caption": "Dean visit registration",
+          "description": "A focused form for registering dean visits with the required schedule details."
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/95d41654-2370-4fa9-b4d8-c81748fc2cbe",
+          "alt": "Visit System registered dean visits schedule",
+          "caption": "Registered dean visits — schedule",
+          "description": "Scheduled dean visits organized for quick review and operational follow-up."
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/8e59e0a4-1f48-49a8-b26c-39ced7868d9f",
+          "alt": "Visit System registered visits audit trail",
+          "caption": "Registered visits — audit trail",
+          "description": "Complete visit records designed for accountability, reporting, and defensible auditing."
+        }
+      ],
+      "pdfLinks": [
+        {
+          "label": "View project details in CV",
+          "href": "/CV_Abdulrahim.pdf"
+        }
+      ]
+    },
+    {
+      "id": "lycosa",
+      "badgeLabel": "Lycosa",
+      "title": "Lycosa",
+      "summary": "A LAN-first distributed platform for orchestrating local and cloud AI agents.",
+      "description": "Lycosa turns workstations, laptops, homelab systems, and mini-PCs into a cooperative AI execution fabric. Its controller discovers devices, recommends roles from their hardware, schedules tasks with failover, routes RAG knowledge requests, coordinates approval-gated workflows, and streams live operations into a cross-platform desktop dashboard.",
+      "techStack": [
+        "Flutter",
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Qdrant",
+        "Ollama",
+        "Docker",
+        "Prometheus",
+        "Grafana"
+      ],
+      "visualJourney": {
+        "title": "From node inventory to execution graph",
+        "description": "Two complementary views of the distributed AI fabric: operational node details and the live controller topology."
+      },
+      "images": [
+        {
+          "src": "/assets/lycosa-nodes-list.png",
+          "alt": "Lycosa desktop dashboard showing connected AI nodes in a list",
+          "caption": "Live node inventory",
+          "description": "Machine status, assigned roles, recommendations, heartbeat timing, CPU, and memory are visible in one operational list."
+        },
+        {
+          "src": "/assets/lycosa-nodes-graph.png",
+          "alt": "Lycosa desktop dashboard graph showing distributed AI nodes connected to a controller",
+          "caption": "Distributed execution graph",
+          "description": "An interactive topology shows registered devices, controller relationships, node roles, and live resource metrics."
+        }
+      ],
+      "links": [
+        {
+          "label": "View Lycosa on GitHub",
+          "href": "https://github.com/abdra7/Lycosa"
+        }
+      ],
+      "pdfLinks": []
+    },
+    {
+      "id": "safehear-ai",
+      "badgeLabel": "SafeHear-AI",
+      "title": "SafeHear-AI",
+      "summary": "An urban emergency-sound detection system powered by machine learning.",
+      "description": "SafeHear-AI is a CNN-based audio classifier for emergency and normal urban sounds. It achieved 97.02% validation accuracy using acoustic features, enabling sound-based situational awareness without visual surveillance.",
+      "techStack": ["Python", "TensorFlow / Keras", "Streamlit", "Librosa", "CNN"],
+      "images": [],
+      "links": [],
+      "pdfLinks": [
+        {
+          "label": "View project details in CV",
+          "href": "/CV_Abdulrahim.pdf"
+        }
+      ]
+    },
+    {
+      "id": "sahilha",
+      "badgeLabel": "Sahilha",
+      "title": "Sahilha",
+      "summary": "A student-centric university web platform for academic organization.",
+      "description": "Sahilha is a student-focused web platform created for Umm Al-Qura University to simplify study organization and everyday academic workflows through a clear, usable interface.",
+      "techStack": ["JavaScript", "HTML5", "CSS3", "UI/UX Design"],
+      "images": [],
+      "links": [],
+      "pdfLinks": [
+        {
+          "label": "View project details in CV",
+          "href": "/CV_Abdulrahim.pdf"
+        }
+      ]
+    },
+    {
+      "id": "public-library",
+      "badgeLabel": "Public Library",
+      "title": "Public Library",
+      "summary": "An additional software project from my development portfolio.",
+      "description": "Public Library is an additional software project listed in my professional portfolio. Detailed media and implementation notes can be added here as the project documentation evolves.",
+      "techStack": ["Software Engineering"],
+      "images": [],
+      "links": [],
+      "pdfLinks": [
+        {
+          "label": "View project listing in CV",
+          "href": "/CV_Abdulrahim.pdf"
+        }
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "id": "rag-enhanced-ai-outputs",
+      "title": "Retrieval-Augmented Generation for Enhanced AI Outputs",
+      "issuer": "IBM",
+      "description": "Practical training in grounding AI outputs with retrieval and external knowledge.",
+      "images": [],
+      "pdfLinks": [
+        {
+          "label": "View in CV",
+          "href": "/CV_Abdulrahim.pdf"
+        }
+      ]
+    },
+    {
+      "id": "agentic-ai",
+      "title": "Make Agentic AI Work for You",
+      "issuer": "IBM",
+      "description": "Training in applying agentic AI concepts to practical workflows and systems.",
+      "images": [],
+      "pdfLinks": [
+        {
+          "label": "View in CV",
+          "href": "/CV_Abdulrahim.pdf"
+        }
+      ]
+    },
+    {
+      "id": "cooperative-training",
+      "title": "Cooperative Training Program",
+      "issuer": "Technical and Vocational Training Corporation",
+      "description": "Applied IT solutions and web-development training in a collaborative professional environment.",
+      "images": [],
+      "pdfLinks": [
+        {
+          "label": "View in CV",
+          "href": "/CV_Abdulrahim.pdf"
+        }
+      ]
+    },
+    {
+      "id": "secure-coding",
+      "title": "Secure Coding Practices",
+      "issuer": "Coursera",
+      "description": "Training in defensive implementation practices and common application-security risks.",
+      "images": [],
+      "pdfLinks": [
+        {
+          "label": "View in CV",
+          "href": "/CV_Abdulrahim.pdf"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity-introduction",
+      "title": "Introduction to Cybersecurity",
+      "issuer": "Coursera",
+      "description": "Foundational coverage of cybersecurity concepts, threats, controls, and risk awareness.",
+      "images": [],
+      "pdfLinks": [
+        {
+          "label": "View in CV",
+          "href": "/CV_Abdulrahim.pdf"
+        }
+      ]
+    }
+  ]
+}
