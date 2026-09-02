@@ -242,7 +242,36 @@
       "summary": "An urban emergency-sound detection system powered by machine learning.",
       "description": "SafeHear-AI is a CNN-based audio classifier for emergency and normal urban sounds. It achieved 97.02% validation accuracy using acoustic features, enabling sound-based situational awareness without visual surveillance.",
       "techStack": ["Python", "TensorFlow / Keras", "Streamlit", "Librosa", "CNN"],
-      "images": [],
+      "visualJourney": {
+        "title": "From urban audio intake to explainable threat assessment",
+        "description": "A privacy-preserving workflow that processes audio in batches, benchmarks the trained model, and turns acoustic features into clear emergency or safety decisions."
+      },
+      "images": [
+        {
+          "src": "/assets/safehear-01-audio-intake.png",
+          "alt": "SafeHear-AI live inference interface with multiple urban WAV files ready for analysis",
+          "caption": "Batch audio intake",
+          "description": "Operators can drag and drop multiple WAV recordings, review the selected files, and confirm that the batch is ready for real-time AI analysis."
+        },
+        {
+          "src": "/assets/safehear-02-benchmarks.png",
+          "alt": "SafeHear-AI research benchmark comparing historical audio classifiers with the current privacy-preserving model",
+          "caption": "Research-backed model performance",
+          "description": "The benchmark view compares established UrbanSound8K baselines with SafeHear-AI's robust CNN, highlighting its 97.02% validation accuracy and privacy-preserving emergency focus."
+        },
+        {
+          "src": "/assets/safehear-03-emergency-detection.png",
+          "alt": "SafeHear-AI detecting a gunshot with high confidence beside its Mel spectrogram",
+          "caption": "High-confidence emergency detection",
+          "description": "A gunshot sample is classified as an emergency with 99.96% confidence, paired with its Mel-spectrogram and an immediate recommendation to alert first responders."
+        },
+        {
+          "src": "/assets/safehear-04-secure-environment.png",
+          "alt": "SafeHear-AI classifying ambient traffic audio as a secure environment beside its Mel spectrogram",
+          "caption": "Normal urban sound verification",
+          "description": "Ambient traffic audio is recognized as a safe routine environment with 99.67% confidence, demonstrating that the model distinguishes everyday city noise from genuine threats."
+        }
+      ],
       "links": [],
       "pdfLinks": [
         {
