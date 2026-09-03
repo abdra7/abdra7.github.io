@@ -139,11 +139,11 @@ function replaceText(root, search, replacement) {
 }
 
 function updatePortfolioContent(portfolio, certificates) {
-  document.title = `Abdulrahim Alharbi — ${portfolio.professionalTitle}`;
+  document.title = `${portfolio.name} — ${portfolio.professionalTitle}`;
 
   const description = document.querySelector('meta[name="description"]');
   if (description) {
-    description.content = `Abdulrahim Alharbi — ${portfolio.professionalTitle}. Portfolio featuring distributed AI, machine learning, logistics, and software systems.`;
+    description.content = `الموقع الرسمي لعبدالرحيم راشد الحربي، مهندس برمجيات ومتخصص في الذكاء الاصطناعي. Official portfolio of software engineer ${portfolio.name}.`;
   }
 
   replaceText(document.body, "Software Engineer & UI/UX Designer", portfolio.professionalTitle);
@@ -188,6 +188,7 @@ function updatePortfolioContent(portfolio, certificates) {
       if (values[0]) values[0].textContent = language.name;
       if (values[1]) values[1].textContent = language.level;
     });
+
   }
 
   const journey = document.getElementById("journey");
