@@ -163,10 +163,20 @@ function updatePortfolioContent(portfolio, certificates) {
     const heading = card.querySelector("h3");
     if (heading) heading.textContent = skill.title;
 
-    const lines = card.querySelectorAll("li span:last-child");
+    const list = card.querySelector("ul");
+    const existingItems = list ? [...list.children] : [];
     skill.lines.forEach((line, lineIndex) => {
-      if (lines[lineIndex]) lines[lineIndex].textContent = line;
+      let item = existingItems[lineIndex];
+      if (!item && list && existingItems[0]) {
+        item = existingItems[0].cloneNode(true);
+        list.append(item);
+      }
+      const label = item?.querySelector("span:last-child");
+      if (label) label.textContent = line;
     });
+    if (list) {
+      [...list.children].slice(skill.lines.length).forEach((item) => item.remove());
+    }
   });
 
   const about = document.getElementById("about");
@@ -204,8 +214,13 @@ function updatePortfolioContent(portfolio, certificates) {
       const bullets = entry.querySelectorAll("li span:last-child");
       if (heading) heading.textContent = experience.title;
       if (period) period.textContent = experience.period;
-      experience.bullets.forEach((bullet, bulletIndex) => {
-        if (bullets[bulletIndex]) bullets[bulletIndex].textContent = bullet;
+      bullets.forEach((bulletElement, bulletIndex) => {
+        const bullet = experience.bullets[bulletIndex];
+        if (bullet) {
+          bulletElement.textContent = bullet;
+        } else {
+          bulletElement.closest("li")?.remove();
+        }
       });
     });
 

@@ -1,8 +1,8 @@
 {
   "portfolio": {
     "name": "Abdulrahim Rashid Alharbi",
-    "professionalTitle": "Software Engineer | AI & Software Systems",
-    "professionalSummary": "Computer Science graduate and Software Engineer with hands-on experience designing and delivering real-world applications from requirements to implementation. Experienced in backend development, APIs, databases, testing, and AI-enabled systems, with practical work across distributed AI, logistics, and machine learning projects. Focused on building reliable, maintainable software that solves practical problems.",
+    "professionalTitle": "Software Engineer | AI",
+    "professionalSummary": "Computer Science graduate and Software Engineer with hands-on experience designing and delivering applications from requirements to implementation. Experienced in backend development, APIs, databases, testing, and AI-enabled systems, with practical work across distributed AI, logistics, and machine learning projects. Focused on building reliable, maintainable software that solves practical problems.",
     "aboutSummary": "I build reliable software from requirements through implementation, combining backend engineering, APIs, databases, testing, and clear user experiences across distributed AI, logistics, and machine learning products.",
     "contactPitch": "If you're hiring for software engineering, AI-enabled systems, distributed agents, logistics platforms, or API-driven products, let's build something reliable and useful.",
     "linkedin": "https://www.linkedin.com/in/abdulrahim-rashid",
@@ -13,7 +13,7 @@
       },
       {
         "title": "AI & Machine Learning",
-        "lines": ["AI Agents", "RAG & Generative AI", "Machine Learning & CNN", "TensorFlow / Keras"]
+        "lines": ["AI Agents", "RAG & Generative AI", "Machine Learning & CNN"]
       },
       {
         "title": "Data & Platforms",
@@ -26,35 +26,32 @@
     ],
     "experience": [
       {
-        "title": "Developer & Designer",
-        "period": "Professional projects",
-        "bullets": [
-          "Built web and mobile solutions using Flutter, Node.js, JavaScript, PHP, MySQL, and REST API integrations.",
-          "Translated user and business requirements into functional interfaces and maintainable software features.",
-          "Delivered practical work across distributed AI, logistics, and machine learning products.",
-          "Focused on reliable, maintainable software that solves real operational problems."
-        ]
-      },
-      {
         "title": "IT Solutions & Web Development Intern - TVTC",
         "period": "Cooperative training",
         "bullets": [
           "Developed web solutions from requirements gathering and UI implementation to database integration and testing.",
-          "Implemented database-backed workflows and responsive interfaces using PHP, JavaScript, MySQL, HTML, and CSS.",
-          "Collaborated in a team environment to plan, implement, test, and deliver working software."
+          "Implemented database-backed workflows and responsive interfaces using PHP, JavaScript, MySQL, HTML, and CSS in a team environment."
+        ]
+      },
+      {
+        "title": "Developer",
+        "period": "Software projects",
+        "bullets": [
+          "Built web and mobile solutions using Flutter, Node.js, JavaScript, PHP, MySQL, and REST API integrations.",
+          "Translated user and business requirements into functional interfaces and maintainable software features."
         ]
       }
     ],
     "education": {
       "institution": "Umm Al-Qura University",
       "degree": "Bachelor of Science in Computer Science",
-      "period": "Makkah, Saudi Arabia · 2026"
+      "period": "Makkah, Saudi Arabia · August 23, 2026"
     },
     "languages": [
       { "name": "Arabic", "level": "Native" },
       { "name": "English", "level": "Full professional proficiency" }
     ],
-    "certificationCount": 5
+    "certificationCount": 4
   },
   "projects": [
     {
@@ -325,51 +322,6 @@
           "href": "/CV_Abdulrahim.pdf"
         }
       ]
-    },
-    {
-      "id": "public-library",
-      "badgeLabel": "Public Library",
-      "title": "Public Library",
-      "summary": "A responsive web application for browsing books, discovering events, and contacting the library.",
-      "description": "Public Library is a lightweight full-stack web application designed for small libraries and educational institutions. It digitizes essential services through a responsive book catalog, interactive book information, upcoming event listings, user authentication, and a contact form backed by message storage, with practical error handling and basic security measures.",
-      "techStack": ["HTML5", "CSS", "JavaScript", "PHP", "MySQL"],
-      "visualJourney": {
-        "title": "From library discovery to community participation",
-        "description": "A clear, responsive experience that introduces the library, helps visitors explore its collection, reveals useful book context, and keeps the community informed about upcoming activities."
-      },
-      "images": [
-        {
-          "src": "/assets/public-library-01-home.png",
-          "alt": "Public Library home page with navigation, welcome message, and library imagery",
-          "caption": "Welcoming library home page",
-          "description": "The landing page establishes the library identity and gives visitors direct access to books, events, contact services, and account login through a simple navigation system."
-        },
-        {
-          "src": "/assets/public-library-02-book-catalog.png",
-          "alt": "Public Library responsive catalog showing book covers, titles, and authors",
-          "caption": "Visual book catalog",
-          "description": "A responsive card grid makes the collection easy to scan by presenting recognizable covers alongside each book's title and author."
-        },
-        {
-          "src": "/assets/public-library-03-book-details.png",
-          "alt": "Public Library book catalog displaying an interactive description for a selected title",
-          "caption": "Contextual book descriptions",
-          "description": "Interactive descriptions reveal a concise synopsis beside the selected book, helping readers understand a title without leaving the catalog."
-        },
-        {
-          "src": "/assets/public-library-04-events.png",
-          "alt": "Public Library upcoming events page with event descriptions, dates, times, and locations",
-          "caption": "Upcoming community events",
-          "description": "Structured event cards bring together activity details, dates, times, and locations for reading sessions, writing workshops, and children's programs."
-        }
-      ],
-      "links": [],
-      "pdfLinks": [
-        {
-          "label": "View project listing in CV",
-          "href": "/CV_Abdulrahim.pdf"
-        }
-      ]
     }
   ],
   "certificates": [
@@ -417,19 +369,6 @@
       "title": "Secure Coding Practices",
       "issuer": "Coursera",
       "description": "Training in defensive implementation practices and common application-security risks.",
-      "images": [],
-      "pdfLinks": [
-        {
-          "label": "View in CV",
-          "href": "/CV_Abdulrahim.pdf"
-        }
-      ]
-    },
-    {
-      "id": "cybersecurity-introduction",
-      "title": "Introduction to Cybersecurity",
-      "issuer": "Coursera",
-      "description": "Foundational coverage of cybersecurity concepts, threats, controls, and risk awareness.",
       "images": [],
       "pdfLinks": [
         {
