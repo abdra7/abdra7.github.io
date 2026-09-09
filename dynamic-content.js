@@ -20,7 +20,6 @@ const TECH_ICONS = {
   CSS: { src: "https://cdn.simpleicons.org/css/663399", label: "CSS" },
   Docker: { src: "https://cdn.simpleicons.org/docker/2496ED", label: "Docker" },
   FastAPI: { src: "https://cdn.simpleicons.org/fastapi/009688", label: "FastAPI" },
-  Figma: { src: "https://cdn.simpleicons.org/figma/F24E1E", label: "Figma" },
   Firebase: { src: "https://cdn.simpleicons.org/firebase/FFCA28", label: "Firebase" },
   Flutter: { src: "https://cdn.simpleicons.org/flutter/02569B", label: "Flutter" },
   Grafana: { src: "https://cdn.simpleicons.org/grafana/F46800", label: "Grafana" },
@@ -36,8 +35,7 @@ const TECH_ICONS = {
   Python: { src: "https://cdn.simpleicons.org/python/3776AB", label: "Python" },
   Qdrant: { src: "https://cdn.simpleicons.org/qdrant/DC244C", label: "Qdrant" },
   Streamlit: { src: "https://cdn.simpleicons.org/streamlit/FF4B4B", label: "Streamlit" },
-  "TensorFlow / Keras": { src: "https://cdn.simpleicons.org/tensorflow/FF6F00", label: "TensorFlow" },
-  "UI/UX Design": { src: "https://cdn.simpleicons.org/figma/F24E1E", label: "Figma" }
+  "TensorFlow / Keras": { src: "https://cdn.simpleicons.org/tensorflow/FF6F00", label: "TensorFlow" }
 };
 
 const PROJECT_ORDER = [
@@ -126,18 +124,6 @@ function enhanceExistingTechStacks() {
   });
 }
 
-function replaceText(root, search, replacement) {
-  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
-  let node = walker.nextNode();
-
-  while (node) {
-    if (node.nodeValue.includes(search)) {
-      node.nodeValue = node.nodeValue.replaceAll(search, replacement);
-    }
-    node = walker.nextNode();
-  }
-}
-
 function updatePortfolioContent(portfolio, certificates) {
   document.title = `${portfolio.name} — ${portfolio.professionalTitle}`;
 
@@ -145,8 +131,6 @@ function updatePortfolioContent(portfolio, certificates) {
   if (description) {
     description.content = `الموقع الرسمي لعبدالرحيم راشد الحربي، مهندس برمجيات ومتخصص في الذكاء الاصطناعي. Official portfolio of software engineer ${portfolio.name}.`;
   }
-
-  replaceText(document.body, "Software Engineer & UI/UX Designer", portfolio.professionalTitle);
 
   const expertiseIntro = [...document.querySelectorAll("#expertise p")].find((element) =>
     element.textContent.startsWith("Grouped from my CV")
@@ -182,9 +166,15 @@ function updatePortfolioContent(portfolio, certificates) {
   const about = document.getElementById("about");
   if (about) {
     const aboutParagraphs = [...about.querySelectorAll("p")];
-    const bio = aboutParagraphs.find((element) => element.textContent.startsWith("I design clear"));
-    const strengths = aboutParagraphs.find((element) => element.textContent.startsWith("Core strengths mirror"));
-    const focus = aboutParagraphs.find((element) => element.textContent.startsWith("UI/UX, front-end"));
+    const bio = aboutParagraphs.find((element) =>
+      element.classList.contains("text-xl")
+    );
+    const strengths = aboutParagraphs.find((element) =>
+      element.classList.contains("mt-6") && element.classList.contains("max-w-xl")
+    );
+    const focus = aboutParagraphs.find((element) =>
+      element.previousElementSibling?.textContent.trim() === "Focus"
+    );
 
     if (bio) bio.textContent = portfolio.aboutSummary;
     if (strengths) strengths.textContent = portfolio.professionalSummary;

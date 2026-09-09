@@ -284,7 +284,7 @@
       "title": "Sahilha",
       "summary": "An Arabic study companion for planning subjects, focused sessions, exams, and achievements.",
       "description": "Sahilha is a student-focused Arabic web platform created for Umm Al-Qura University. Its RTL experience brings study planning into one calm workspace with a personalized dashboard, configurable Pomodoro sessions, subject notes, exam and quiz scheduling, progress statistics, motivational streaks, achievements, and direct links to essential university services.",
-      "techStack": ["JavaScript", "HTML5", "CSS", "UI/UX Design"],
+      "techStack": ["JavaScript", "HTML5", "CSS"],
       "visualJourney": {
         "title": "From daily study planning to consistent academic progress",
         "description": "A focused Arabic RTL workflow that helps students understand their day, protect concentration time, organize every subject, and stay motivated through visible progress and achievements."
