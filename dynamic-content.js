@@ -201,17 +201,22 @@ function updatePortfolioContent(portfolio, certificates) {
 
       const heading = entry.querySelector("h3");
       const period = entry.querySelector("div:first-child p:nth-child(2)");
-      const bullets = entry.querySelectorAll("li span:last-child");
+      const bulletList = entry.querySelector("ul");
+      const existingBullets = bulletList ? [...bulletList.children] : [];
       if (heading) heading.textContent = experience.title;
       if (period) period.textContent = experience.period;
-      bullets.forEach((bulletElement, bulletIndex) => {
-        const bullet = experience.bullets[bulletIndex];
-        if (bullet) {
-          bulletElement.textContent = bullet;
-        } else {
-          bulletElement.closest("li")?.remove();
+      experience.bullets.forEach((bullet, bulletIndex) => {
+        let item = existingBullets[bulletIndex];
+        if (!item && bulletList && existingBullets[0]) {
+          item = existingBullets[0].cloneNode(true);
+          bulletList.append(item);
         }
+        const bulletElement = item?.querySelector("span:last-child");
+        if (bulletElement) bulletElement.textContent = bullet;
       });
+      if (bulletList) {
+        [...bulletList.children].slice(experience.bullets.length).forEach((item) => item.remove());
+      }
     });
 
     const educationEntry = entries[2];
