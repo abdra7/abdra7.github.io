@@ -342,3 +342,38 @@ ul[aria-label="Tech stack"] li:has(> .portfolio-tech-icon) {
     min-height: 13rem;
   }
 }
+
+/* Keep the complete hero introduction visible across laptop aspect ratios. */
+.cinematic-hero {
+  height: auto;
+  min-height: 100svh;
+}
+
+.cinematic-headline {
+  font-size: clamp(2.4rem, min(11.5vw, 15svh), 12rem);
+}
+
+/* Switch to the compact navigation before the desktop links become crowded. */
+@media (min-width: 768px) and (max-width: 1099px) {
+  header nav {
+    display: none !important;
+  }
+
+  header button[aria-controls="mobile-nav"] {
+    display: inline-flex !important;
+  }
+
+  #mobile-nav {
+    display: block !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .cinematic-hero {
+    min-height: max(640px, 100svh);
+  }
+
+  .cinematic-headline {
+    line-height: 0.96;
+  }
+}
