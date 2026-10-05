@@ -1,5 +1,5 @@
 const TARGET_A_XPATH = "/html/body/div/div/main/section[4]";
-const TARGET_B_XPATH = "/html/body/div/div/main/div[3]/section[1]/div";
+const TARGET_B_XPATH = "//div[@id='work']";
 
 const modal = document.getElementById("project-modal");
 const modalClose = document.getElementById("project-modal-close");
@@ -229,7 +229,9 @@ function updatePortfolioContent(portfolio, certificates) {
       }
     });
 
-    const educationEntry = entries[2];
+    const educationEntry = [...entries].find(
+      (entry) => entry.querySelector("p")?.textContent.trim() === "Education"
+    );
     if (educationEntry) {
       const heading = educationEntry.querySelector("h3");
       const period = educationEntry.querySelector("div:first-child p:nth-child(2)");
@@ -273,21 +275,6 @@ function updatePortfolioContent(portfolio, certificates) {
       if (label) label.textContent = "abdulrahim-rashid";
     }
   }
-
-  window.setTimeout(() => {
-    const labels = [...document.querySelectorAll("main section p")];
-    const certificationLabel = labels.find((element) =>
-      element.textContent.trim() === "Professional certifications"
-    );
-    if (certificationLabel?.previousElementSibling) {
-      certificationLabel.previousElementSibling.textContent = String(portfolio.certificationCount);
-    }
-
-    const graduationLabel = labels.find((element) =>
-      element.textContent.trim() === "Graduating — Computer Science"
-    );
-    if (graduationLabel) graduationLabel.textContent = "Computer Science graduate — 2026";
-  }, 1700);
 }
 
 function renderCertificates(target, certificates) {
@@ -417,19 +404,34 @@ function createProjectCard(project) {
 
 function renderProjectBadges(target, projects) {
   const block = document.createElement("div");
-  block.className = "portfolio-projects hair mt-10 border-t pt-10";
+  block.className = "portfolio-projects";
   block.dataset.dynamicContent = "project-badges";
 
-  block.append(
+  // Same header pattern as the other sections (eyebrow, large heading, accent tick).
+  const header = document.createElement("div");
+  header.className = "mb-10 md:mb-14";
+  const heading = createTextElement(
+    "h2",
+    "editorial-heading mt-3 text-4xl text-brand-heading md:text-6xl",
+    "Selected work"
+  );
+  heading.id = "projects-heading";
+  const tick = document.createElement("span");
+  tick.className = "accent-tick mt-4 origin-left";
+  tick.setAttribute("aria-hidden", "true");
+  header.append(
     createTextElement(
       "p",
-      "text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-strong",
+      "text-xs font-semibold uppercase tracking-[0.22em] text-brand-strong",
       "Projects"
-    )
+    ),
+    heading,
+    tick
   );
+  block.append(header);
 
   const grid = document.createElement("div");
-  grid.className = "pf-grid";
+  grid.className = "pf-grid hair border-t pt-10";
 
   const rank = (project) => {
     const index = PROJECT_ORDER.indexOf(project.id);
@@ -449,79 +451,8 @@ function renderProjectBadges(target, projects) {
   });
 
   block.append(grid);
-  const work = document.getElementById("work");
-  (work ?? target).prepend(block);
-
-  ["darbak", "visit-system"].forEach((sectionId) => {
-    const legacySection = document.getElementById(sectionId);
-    if (legacySection) legacySection.hidden = true;
-  });
-
-  document.querySelectorAll('a[href="#darbak"], a[href="#visit-system"]').forEach((link) => {
-    link.href = "#work";
-  });
-}
-
-function startFeaturedImageRotation(projects) {
-  const imageSlots = [
-    document.querySelector('img[alt="Darbak logistics platform interface"]'),
-    document.querySelector('img[alt="Visit System operations interface"]')
-  ].filter(Boolean);
-
-  const imagePool = projects.flatMap((project) =>
-    (project.images ?? []).map((imageData) => ({
-      ...imageData,
-      projectTitle: project.badgeLabel ?? project.title
-    }))
-  );
-
-  if (imageSlots.length !== 2 || imagePool.length < 2) return;
-
-  let cursor = 0;
-  let isUpdating = false;
-
-  const preloadImage = (imageData) =>
-    new Promise((resolve, reject) => {
-      const image = new Image();
-      image.onload = () => resolve(imageData);
-      image.onerror = reject;
-      image.referrerPolicy = "no-referrer";
-      image.src = imageData.src;
-    });
-
-  const rotateImages = async () => {
-    if (document.hidden || isUpdating) return;
-    isUpdating = true;
-
-    const nextImages = imageSlots.map(
-      (_, index) => imagePool[(cursor + index) % imagePool.length]
-    );
-
-    try {
-      const loadedImages = await Promise.all(nextImages.map(preloadImage));
-
-      imageSlots.forEach((slot, index) => {
-        const imageData = loadedImages[index];
-        slot.src = imageData.src;
-        slot.alt = `${imageData.projectTitle} — ${imageData.alt}`;
-        slot.referrerPolicy = "no-referrer";
-
-        const caption = slot.closest("figure")?.querySelector("figcaption");
-        if (caption) {
-          caption.textContent = `${imageData.projectTitle} — ${imageData.caption}`;
-        }
-      });
-
-      cursor = (cursor + imageSlots.length) % imagePool.length;
-    } catch (error) {
-      cursor = (cursor + 1) % imagePool.length;
-      console.warn("A featured project image could not be loaded.", error);
-    } finally {
-      isUpdating = false;
-    }
-  };
-
-  window.setInterval(rotateImages, 3000);
+  target.setAttribute("aria-labelledby", heading.id);
+  target.prepend(block);
 }
 
 function openProjectModal(project, trigger) {
@@ -635,7 +566,6 @@ async function initializeDynamicContent() {
   enhanceExistingTechStacks();
   renderCertificates(targets.targetA, data.certificates);
   renderProjectBadges(targets.targetB, data.projects);
-  startFeaturedImageRotation(data.projects);
 }
 
 initializeDynamicContent().catch((error) => {

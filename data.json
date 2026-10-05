@@ -45,22 +45,41 @@
     ],
     "experience": [
       {
-        "title": "IT Solutions & Web Development Intern - TVTC",
-        "period": "Cooperative training",
+        "title": "Creator & Maintainer — Lycosa",
+        "period": "Open source · Jul 2026 – Present",
+        "bullets": [
+          "Designed and built a LAN-first platform that orchestrates local, cloud and one-shot AI agents across a user's own devices, with RAG, workflows and a Flutter desktop dashboard.",
+          "Wrote the FastAPI controller, the Python device agent and the cross-platform Flutter dashboard, with releases for Windows, macOS and Linux.",
+          "Runs the project with sprints, 30+ Architecture Decision Records, CI, a changelog and a security policy."
+        ]
+      },
+      {
+        "title": "Backend Developer & Software Tester — WITHAQ",
+        "period": "SAIF 2026 · Team of six",
+        "bullets": [
+          "Member of a six-person team building WITHAQ, a governed containment and data-lifecycle control system for suspect network devices, in the SAIF 2026 Cybersecurity & Defense Technologies track.",
+          "Works on the backend services, built with Python, FastAPI, SQLAlchemy, Alembic and PostgreSQL.",
+          "Tests the system to verify that it behaves as claimed."
+        ]
+      },
+      {
+        "title": "Software Developer",
+        "period": "Academic & team projects",
+        "bullets": [
+          "Developed core mobile and backend workflows for Darbak, a freight-bidding marketplace and graduation project (Flutter, Node.js, MySQL).",
+          "Built web and mobile solutions using Flutter, Node.js, JavaScript, PHP, MySQL, and REST API integrations.",
+          "Translated user and business requirements into functional interfaces and maintainable software features."
+        ]
+      },
+      {
+        "title": "IT Solutions & Web Development Intern — TVTC",
+        "period": "Cooperative training · Mar – Jul 2025",
         "bullets": [
           "Developed web solutions from requirements gathering and UI implementation to database integration and testing.",
           "Implemented database-backed workflows and responsive interfaces using PHP, JavaScript, MySQL, HTML, and CSS in a team environment.",
           "System administration and IT support — Managed and secured domain user accounts by removing unauthorized profiles from the network.",
           "Infrastructure upgrades — Upgraded lab network connectivity by installing Ethernet cabling to replace unstable wireless connections.",
           "Ethernet cabling — Prepared, stripped, terminated, and tested Ethernet cables to ensure reliable connectivity."
-        ]
-      },
-      {
-        "title": "Developer",
-        "period": "Software projects",
-        "bullets": [
-          "Built web and mobile solutions using Flutter, Node.js, JavaScript, PHP, MySQL, and REST API integrations.",
-          "Translated user and business requirements into functional interfaces and maintainable software features."
         ]
       }
     ],
@@ -79,7 +98,7 @@
         "level": "Full professional proficiency"
       }
     ],
-    "certificationCount": 4
+    "certificationCount": 5
   },
   "projects": [
     {
@@ -550,6 +569,14 @@
           "href": "/CV_Abdulrahim.pdf"
         }
       ]
+    },
+    {
+      "id": "leap-2026",
+      "title": "LEAP 2026",
+      "issuer": "LEAP",
+      "description": "Attended the LEAP 2026 technology conference in Riyadh, following developments in AI, software engineering, cybersecurity and cloud.",
+      "images": [],
+      "pdfLinks": []
     },
     {
       "id": "cooperative-training",
