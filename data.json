@@ -480,8 +480,7 @@
       "techStack": [
         "JavaScript",
         "HTML5",
-        "CSS",
-        "SVG"
+        "CSS"
       ],
       "visualJourney": {
         "title": "Learning, one floor at a time",
@@ -517,10 +516,6 @@
         {
           "label": "Open AI Roadmap",
           "href": "https://abdulrahim.page/Roadmap-For-Ai/"
-        },
-        {
-          "label": "View on GitHub",
-          "href": "https://github.com/abdra7/Roadmap-For-Ai"
         }
       ],
       "pdfLinks": []
