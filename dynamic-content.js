@@ -35,17 +35,27 @@ const TECH_ICONS = {
   Python: { src: "https://cdn.simpleicons.org/python/3776AB", label: "Python" },
   Qdrant: { src: "https://cdn.simpleicons.org/qdrant/DC244C", label: "Qdrant" },
   Streamlit: { src: "https://cdn.simpleicons.org/streamlit/FF4B4B", label: "Streamlit" },
-  "TensorFlow / Keras": { src: "https://cdn.simpleicons.org/tensorflow/FF6F00", label: "TensorFlow" }
+  "TensorFlow / Keras": { src: "https://cdn.simpleicons.org/tensorflow/FF6F00", label: "TensorFlow" },
+  React: { src: "https://cdn.simpleicons.org/react/61DAFB", label: "React" },
+  "Three.js": { src: "https://cdn.simpleicons.org/threedotjs/888888", label: "Three.js" },
+  WebGL: { src: "https://cdn.simpleicons.org/webgl/990000", label: "WebGL" },
+  Vite: { src: "https://cdn.simpleicons.org/vite/646CFF", label: "Vite" },
+  SVG: { src: "https://cdn.simpleicons.org/svg/FFB13B", label: "SVG" }
 };
 
 const PROJECT_ORDER = [
+  "coming-soon",
   "lycosa",
   "darbak",
-  "visit-system",
+  "tactix",
+  "ai-roadmap",
   "safehear-ai",
+  "visit-system",
   "sahilha",
   "public-library"
 ];
+
+const LIVE_STATUSES = ["live", "active"];
 
 function getElementByXPath(xpath) {
   return document.evaluate(
@@ -325,6 +335,86 @@ function renderCertificates(target, certificates) {
   target.append(block);
 }
 
+const EXTERNAL_ICON =
+  '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>';
+
+function createStatusPill(status) {
+  const pill = document.createElement("span");
+  const key = String(status || "").toLowerCase().replace(/\s+/g, "-");
+  pill.className = `pf-status pf-status--${key}`;
+  if (LIVE_STATUSES.includes(key)) pill.classList.add("pf-status--on");
+  const dot = document.createElement("span");
+  dot.className = "pf-status__dot";
+  dot.setAttribute("aria-hidden", "true");
+  pill.append(dot, document.createTextNode(status));
+  return pill;
+}
+
+function createProjectCard(project) {
+  const card = document.createElement("article");
+  card.className = "pf-card";
+  card.dataset.projectId = project.id;
+
+  const head = document.createElement("div");
+  head.className = "pf-card__head";
+
+  const content = document.createElement("div");
+  content.className = "pf-card__content";
+
+  if (project.comingSoon) {
+    card.classList.add("pf-card--soon");
+    card.setAttribute("aria-label", `${project.badgeLabel}: ${project.status}`);
+    // Readable placeholder text, blurred on purpose; hidden from screen readers.
+    content.setAttribute("aria-hidden", "true");
+    head.append(createTextElement("h3", "pf-card__title", project.badgeLabel));
+  } else {
+    const titleButton = document.createElement("button");
+    titleButton.type = "button";
+    titleButton.className = "pf-card__open";
+    titleButton.setAttribute("aria-haspopup", "dialog");
+    titleButton.textContent = project.badgeLabel;
+    titleButton.setAttribute("aria-label", `${project.badgeLabel} — open project details`);
+    const title = document.createElement("h3");
+    title.className = "pf-card__title";
+    title.append(titleButton);
+    head.append(title);
+  }
+
+  const meta = document.createElement("div");
+  meta.className = "pf-card__meta";
+  if (project.status) meta.append(createStatusPill(project.status));
+
+  const primaryLink = project.links?.[0];
+  if (primaryLink && !project.comingSoon) {
+    const link = document.createElement("a");
+    link.className = "pf-card__link";
+    link.href = primaryLink.href;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.title = primaryLink.label;
+    link.setAttribute("aria-label", primaryLink.label);
+    link.innerHTML = EXTERNAL_ICON;
+    meta.append(link);
+  }
+
+  const description = createTextElement("p", "pf-card__summary", project.summary);
+
+  const tags = document.createElement("ul");
+  tags.className = "pf-card__tags";
+  tags.setAttribute("aria-label", `${project.badgeLabel} technology stack`);
+  (project.techStack ?? []).slice(0, 4).forEach((technology) => {
+    tags.append(createTextElement("li", "pf-tag", technology));
+  });
+
+  if (project.comingSoon) {
+    content.append(head, description, tags);
+    card.append(content, meta);
+  } else {
+    card.append(head, meta, description, tags);
+  }
+  return card;
+}
+
 function renderProjectBadges(target, projects) {
   const block = document.createElement("div");
   block.className = "portfolio-projects hair mt-10 border-t pt-10";
@@ -338,75 +428,27 @@ function renderProjectBadges(target, projects) {
     )
   );
 
-  const badgeList = document.createElement("div");
-  badgeList.className = "portfolio-projects__grid";
+  const grid = document.createElement("div");
+  grid.className = "pf-grid";
 
-  const orderedProjects = [...projects].sort(
-    (first, second) => PROJECT_ORDER.indexOf(first.id) - PROJECT_ORDER.indexOf(second.id)
-  );
-
-  orderedProjects.forEach((project) => {
-    const badge = document.createElement("button");
-    badge.type = "button";
-    badge.className = "portfolio-project-card";
-    badge.dataset.projectId = project.id;
-    badge.setAttribute("aria-haspopup", "dialog");
-    badge.setAttribute("aria-label", `Open ${project.badgeLabel} project details`);
-
-    const title = createTextElement("span", "portfolio-project-card__title", project.badgeLabel);
-    const body = document.createElement("span");
-    body.className = "portfolio-project-card__body";
-
-    const previewImage = project.images?.[0];
-    if (previewImage) {
-      const preview = document.createElement("img");
-      preview.className = "portfolio-project-card__preview";
-      preview.src = previewImage.src;
-      preview.alt = previewImage.alt;
-      preview.loading = "lazy";
-      preview.decoding = "async";
-      preview.referrerPolicy = "no-referrer";
-      body.append(preview);
-    } else {
-      const placeholder = document.createElement("span");
-      placeholder.className = "portfolio-project-card__placeholder";
-      placeholder.append(createTextElement("span", "portfolio-project-card__action", "Project preview coming soon"));
-      body.append(placeholder);
-    }
-
-    const footer = document.createElement("span");
-    footer.className = "portfolio-project-card__footer";
-    footer.setAttribute("aria-label", `${project.badgeLabel} technology stack`);
-
-    footer.append(createTextElement("span", "portfolio-project-card__summary", project.summary));
-
-    const technologyIcons = document.createElement("span");
-    technologyIcons.className = "portfolio-project-card__technologies";
-
-    (project.techStack ?? []).slice(0, 4).forEach((technology) => {
-      const icon = createTechIcon(technology);
-      if (icon) technologyIcons.append(icon);
-    });
-
-    if (!technologyIcons.children.length) {
-      technologyIcons.append(createTextElement("span", "portfolio-project-card__fallback", "Software project"));
-    }
-
-    footer.append(technologyIcons);
-
-    badge.append(title, body, footer);
-    badgeList.append(badge);
+  const rank = (project) => {
+    const index = PROJECT_ORDER.indexOf(project.id);
+    return index === -1 ? PROJECT_ORDER.length : index;
+  };
+  [...projects].sort((first, second) => rank(first) - rank(second)).forEach((project) => {
+    grid.append(createProjectCard(project));
   });
 
-  badgeList.addEventListener("click", (event) => {
-    const badge = event.target.closest("[data-project-id]");
-    if (!badge) return;
-
-    const project = projectsById.get(badge.dataset.projectId);
-    if (project) openProjectModal(project, badge);
+  // The whole card opens the project details, except the external link.
+  grid.addEventListener("click", (event) => {
+    if (event.target.closest("a")) return;
+    const card = event.target.closest(".pf-card");
+    if (!card || card.classList.contains("pf-card--soon")) return;
+    const project = projectsById.get(card.dataset.projectId);
+    if (project) openProjectModal(project, card.querySelector(".pf-card__open") ?? card);
   });
 
-  block.append(badgeList);
+  block.append(grid);
   const work = document.getElementById("work");
   (work ?? target).prepend(block);
 
@@ -490,7 +532,8 @@ function openProjectModal(project, trigger) {
   modalImages.replaceChildren();
   modalLinks.replaceChildren();
 
-  const hasVisualJourney = project.images.length > 0;
+  const images = project.images ?? [];
+  const hasVisualJourney = images.length > 0;
   modalJourney.hidden = !hasVisualJourney;
   modalJourneyTitle.textContent = project.visualJourney?.title ?? `${project.title} visual journey`;
   modalJourneyDescription.textContent = project.visualJourney?.description ?? "Explore the primary interfaces and product experience.";
@@ -504,7 +547,7 @@ function openProjectModal(project, trigger) {
     modalStack.append(chip);
   });
 
-  project.images.forEach((imageData) => {
+  images.forEach((imageData) => {
     const figure = document.createElement("figure");
     figure.className = "project-modal__figure";
 

@@ -9,19 +9,38 @@
     "skills": [
       {
         "title": "Software Engineering",
-        "lines": ["Flutter & Dart", "Python & FastAPI", "Node.js & JavaScript", "REST APIs & Git"]
+        "lines": [
+          "Flutter & Dart",
+          "Python & FastAPI",
+          "Node.js & JavaScript",
+          "REST APIs & Git"
+        ]
       },
       {
         "title": "AI & Machine Learning",
-        "lines": ["AI Agents", "RAG & Generative AI", "Machine Learning & CNN"]
+        "lines": [
+          "AI Agents",
+          "RAG & Generative AI",
+          "Machine Learning & CNN"
+        ]
       },
       {
         "title": "Data & Platforms",
-        "lines": ["PostgreSQL & MySQL", "Qdrant", "Ollama", "Streamlit"]
+        "lines": [
+          "PostgreSQL & MySQL",
+          "Qdrant",
+          "Ollama",
+          "Streamlit"
+        ]
       },
       {
         "title": "Engineering Practices",
-        "lines": ["Requirements Engineering", "QA & Testing", "Project Planning", "Problem Solving"]
+        "lines": [
+          "Requirements Engineering",
+          "QA & Testing",
+          "Project Planning",
+          "Problem Solving"
+        ]
       }
     ],
     "experience": [
@@ -51,8 +70,14 @@
       "period": "Makkah, Saudi Arabia · August 23, 2026"
     },
     "languages": [
-      { "name": "Arabic", "level": "Native" },
-      { "name": "English", "level": "Full professional proficiency" }
+      {
+        "name": "Arabic",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Full professional proficiency"
+      }
     ],
     "certificationCount": 4
   },
@@ -63,7 +88,13 @@
       "title": "Darbak Logistics Platform",
       "summary": "A logistics marketplace for businesses and independent drivers in Saudi Arabia.",
       "description": "Darbak streamlines shipment intake, competitive driver bidding, offer comparison, live tracking, and digital delivery confirmation in one operational flow.",
-      "techStack": ["Flutter", "Node.js", "MySQL", "AWS S3", "Firebase"],
+      "techStack": [
+        "Flutter",
+        "Node.js",
+        "MySQL",
+        "AWS S3",
+        "Firebase"
+      ],
       "visualJourney": {
         "title": "From shipment request to confirmed delivery",
         "description": "An annotated walkthrough of the core mobile experience, pairing every screen with the interaction it supports."
@@ -105,6 +136,13 @@
           "label": "View project details in CV",
           "href": "/CV_Abdulrahim.pdf"
         }
+      ],
+      "status": "Completed",
+      "links": [
+        {
+          "label": "View Darbak on GitHub",
+          "href": "https://github.com/faris-15/Darbak"
+        }
       ]
     },
     {
@@ -113,7 +151,13 @@
       "title": "Visit System",
       "summary": "An Arabic RTL visitor-management and institutional operations platform.",
       "description": "The Visit System supports secure authentication, role-based dashboards, visit registration and tracking, supervisor and administrator management, statistics, visitor categories, scheduling, and audit-friendly visit records.",
-      "techStack": ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+      "techStack": [
+        "PHP",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "visualJourney": {
         "title": "A complete institutional visit workflow",
         "description": "Eleven interfaces covering secure entry, operational dashboards, people and policy management, scheduling, and audit-ready records."
@@ -191,6 +235,13 @@
           "label": "View project details in CV",
           "href": "/CV_Abdulrahim.pdf"
         }
+      ],
+      "status": "Completed",
+      "links": [
+        {
+          "label": "View Visit System on GitHub",
+          "href": "https://github.com/abdra7/Visits-Systems"
+        }
       ]
     },
     {
@@ -234,7 +285,8 @@
           "href": "https://github.com/abdra7/Lycosa"
         }
       ],
-      "pdfLinks": []
+      "pdfLinks": [],
+      "status": "Active"
     },
     {
       "id": "safehear-ai",
@@ -242,7 +294,13 @@
       "title": "SafeHear-AI",
       "summary": "An urban emergency-sound detection system powered by machine learning.",
       "description": "SafeHear-AI is a CNN-based audio classifier for emergency and normal urban sounds. It achieved 97.02% validation accuracy using acoustic features, enabling sound-based situational awareness without visual surveillance.",
-      "techStack": ["Python", "TensorFlow / Keras", "Streamlit", "Librosa", "CNN"],
+      "techStack": [
+        "Python",
+        "TensorFlow / Keras",
+        "Streamlit",
+        "Librosa",
+        "CNN"
+      ],
       "visualJourney": {
         "title": "From urban audio intake to explainable threat assessment",
         "description": "A privacy-preserving workflow that processes audio in batches, benchmarks the trained model, and turns acoustic features into clear emergency or safety decisions."
@@ -273,13 +331,19 @@
           "description": "Ambient traffic audio is recognized as a safe routine environment with 99.67% confidence, demonstrating that the model distinguishes everyday city noise from genuine threats."
         }
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "View SafeHear-AI on GitHub",
+          "href": "https://github.com/faris-15/SafeHear-AI"
+        }
+      ],
       "pdfLinks": [
         {
           "label": "View project details in CV",
           "href": "/CV_Abdulrahim.pdf"
         }
-      ]
+      ],
+      "status": "Completed"
     },
     {
       "id": "sahilha",
@@ -287,7 +351,11 @@
       "title": "Sahilha",
       "summary": "An Arabic study companion for planning subjects, focused sessions, exams, and achievements.",
       "description": "Sahilha is a student-focused Arabic web platform created for Umm Al-Qura University. Its RTL experience brings study planning into one calm workspace with a personalized dashboard, configurable Pomodoro sessions, subject notes, exam and quiz scheduling, progress statistics, motivational streaks, achievements, and direct links to essential university services.",
-      "techStack": ["JavaScript", "HTML5", "CSS"],
+      "techStack": [
+        "JavaScript",
+        "HTML5",
+        "CSS"
+      ],
       "visualJourney": {
         "title": "From daily study planning to consistent academic progress",
         "description": "A focused Arabic RTL workflow that helps students understand their day, protect concentration time, organize every subject, and stay motivated through visible progress and achievements."
@@ -318,13 +386,142 @@
           "description": "Progress-based badges reward useful habits such as adding subjects, completing focus sessions, recording assessments, maintaining a study streak, and reaching long-term study milestones."
         }
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "View Sahilha on GitHub",
+          "href": "https://github.com/faris-15/Sahilha-"
+        }
+      ],
       "pdfLinks": [
         {
           "label": "View project details in CV",
           "href": "/CV_Abdulrahim.pdf"
         }
-      ]
+      ],
+      "status": "Completed"
+    },
+    {
+      "id": "tactix",
+      "badgeLabel": "TACTIX",
+      "title": "TACTIX — 3D Padel Tactics Board",
+      "status": "Live",
+      "summary": "A free 3D padel tactics board: move the players, draw shot paths and explore every angle, in Arabic or English.",
+      "description": "TACTIX is a standalone 3D padel tactics playground. Visitors move the players and the ball, trace a shot route, shape its height and explore it in 3D before placing it on the court. It works in Arabic and English, on desktop and touch screens, with no sign-up — each visitor's court is saved in their own browser.",
+      "techStack": [
+        "React",
+        "Three.js",
+        "WebGL",
+        "Vite"
+      ],
+      "visualJourney": {
+        "title": "From an empty court to a planned shot",
+        "description": "Four views of the demo: the court, player positioning, the top view and the 3D path editor."
+      },
+      "images": [
+        {
+          "src": "/assets/tactix-01-court.webp",
+          "alt": "TACTIX demo home with the 3D padel court",
+          "caption": "Play it out here",
+          "description": "The demo opens on a 3D padel court with four players and the ball, ready to move."
+        },
+        {
+          "src": "/assets/tactix-02-tactics-board.webp",
+          "alt": "TACTIX player and ball controls next to the court",
+          "caption": "Move players and the ball",
+          "description": "Select a player or the ball, then place it with the sliders or the arrow keys."
+        },
+        {
+          "src": "/assets/tactix-03-top-view.webp",
+          "alt": "TACTIX court from the top view",
+          "caption": "Top view",
+          "description": "A bird's-eye view for checking spacing and court coverage."
+        },
+        {
+          "src": "/assets/tactix-04-3d-path-editor.webp",
+          "alt": "TACTIX 3D shot path editor",
+          "caption": "Shape a 3D shot path",
+          "description": "Trace the route, set its height, then explore the shot in 3D before placing it on the court."
+        }
+      ],
+      "links": [
+        {
+          "label": "Open the live demo",
+          "href": "https://abdulrahim.page/tactix-demo/"
+        }
+      ],
+      "pdfLinks": []
+    },
+    {
+      "id": "ai-roadmap",
+      "badgeLabel": "AI Roadmap",
+      "title": "AI Roadmap — AI Engineering Learning City",
+      "status": "Live",
+      "summary": "A gamified AI-engineering roadmap where every finished lesson adds a glowing floor to a night-city tower.",
+      "description": "AI Roadmap turns a 49-lesson AI-engineering curriculum into a night-city skyline: seven topics are seven towers, and each completed lesson lights a new floor. It tracks study hours and streaks, highlights the weakest topics, and includes flashcards, a glossary and instant search — all stored in the browser, with no sign-up.",
+      "techStack": [
+        "JavaScript",
+        "HTML5",
+        "CSS",
+        "SVG"
+      ],
+      "visualJourney": {
+        "title": "Learning, one floor at a time",
+        "description": "The city dashboard, a tower's lessons, memory cards and the statistics page."
+      },
+      "images": [
+        {
+          "src": "/assets/roadmap-01-city.webp",
+          "alt": "AI Roadmap night-city dashboard with seven towers",
+          "caption": "Night-city dashboard",
+          "description": "Seven towers, one per topic; finished lessons light up new floors."
+        },
+        {
+          "src": "/assets/roadmap-02-tower-lessons.webp",
+          "alt": "AI Roadmap tower lessons dialog",
+          "caption": "Tower lessons",
+          "description": "Each tower lists its lessons with duration, key concepts and progress."
+        },
+        {
+          "src": "/assets/roadmap-03-flashcards.webp",
+          "alt": "AI Roadmap flashcards page",
+          "caption": "Memory cards",
+          "description": "Flashcards for key concepts, filtered by topic, plus your own cards."
+        },
+        {
+          "src": "/assets/roadmap-04-statistics.webp",
+          "alt": "AI Roadmap statistics page",
+          "caption": "Statistics",
+          "description": "Progress per tower, study minutes over 14 days, focus areas and recent activity."
+        }
+      ],
+      "links": [
+        {
+          "label": "Open AI Roadmap",
+          "href": "https://abdulrahim.page/Roadmap-For-Ai/"
+        },
+        {
+          "label": "View on GitHub",
+          "href": "https://github.com/abdra7/Roadmap-For-Ai"
+        }
+      ],
+      "pdfLinks": []
+    },
+    {
+      "id": "coming-soon",
+      "comingSoon": true,
+      "badgeLabel": "Next project",
+      "title": "Next project",
+      "status": "Coming soon",
+      "summary": "A new AI product is in the works. Details will be shared here soon.",
+      "description": "",
+      "techStack": [
+        "Python",
+        "AI Agents",
+        "FastAPI"
+      ],
+      "images": [],
+      "links": [],
+      "pdfLinks": []
     }
   ],
   "certificates": [
